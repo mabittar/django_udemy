@@ -1,0 +1,69 @@
+*{
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 5000px;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+h3{
+    font-family: "Lato";
+    text-align: center;
+}
+body{
+    font-size: 20px;
+}
+#prag-two{
+    font-size: 2.0em;
+    font-family: 'Roboto', sans-serif;
+}
+div{
+    color: red;
+}
+.firstDiv{
+    color: blue;
+}
+.secondDiv{
+    color: green;
+}
+#singledout{
+    color: yellow;
+    text-decoration: line-through;
+}
+
+h3 + ul{
+    border: 4px dotted blueviolet;
+}
+
+li a{
+    color: lightpink;
+}
+li a[href="https://www.google.com"]{
+    color: lightgreen;
+    border: 1px dotted orange;
+}
+
+.topitems{
+    color: lightblue;
+}
+#two{
+    border: 3px solid white
+}
+
+
+.border-style_rules{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#top{
+    border: 4px solid blue;
+    width: 25%;
+    text-align: center;
+    margin: auto;
+}
+
+#bottom{
+    border: 4px solid red;
+    padding: 20px
+}
