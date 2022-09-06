@@ -6,3 +6,10 @@ from django.shortcuts import render
 
 def index(request):
     return HttpResponse("Ola Mundo!")
+
+
+def help(request):
+    response_dict = {
+        "help_response": "HELP PAGE"
+    }
+    return render(request, 'help/help.html', context=response_dict)
