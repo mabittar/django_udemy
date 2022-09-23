@@ -3,7 +3,7 @@ from django.urls import reverse
 
 
 class Topic(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     top_name = models.CharField(max_length=264, unique=True)
     
 
@@ -18,7 +18,7 @@ class Topic(models.Model):
         return reverse("topic_detail", kwargs={"pk": self.pk})
     
 class Webpage(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     topic = models.ForeignKey(Topic, related_name="webpages", on_delete=models.CASCADE)
     name = models.CharField(max_length=264, unique=True, db_index=True)
     url = models.URLField(unique=True)
