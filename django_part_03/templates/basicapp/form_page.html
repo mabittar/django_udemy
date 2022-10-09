@@ -14,6 +14,15 @@
   </head>
   <body>
     <div class="container-fluid py-5 text-white bg-black"></div>
-    <form>{{form|crispy}}</form>
+    <form action="." novalidate method="post">
+      {{form|crispy}} {% csrf_token %}
+
+      <input
+        type="submit"
+        value="Submit"
+        class="btn btn-primary"
+        id="submit-id-submit"
+      />
+    </form>
   </body>
 </html>
