@@ -10,6 +10,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+
     <title>Forms</title>
   </head>
   <body>
@@ -17,12 +18,15 @@
     <form action="." novalidate method="post">
       {{form|crispy}} {% csrf_token %}
 
-      <input
-        type="submit"
-        value="Submit"
-        class="btn btn-primary"
-        id="submit-id-submit"
-      />
+      <button
+        class="g-recaptcha"
+        data-sitekey="reCAPTCHA_site_key"
+        data-callback="onSubmit"
+        data-action="submit"
+      >
+        Submit
+      </button>
     </form>
   </body>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
 </html>

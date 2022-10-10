@@ -1,3 +1,5 @@
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV2Invisible
 from django import forms
 from django.core import validators
 
@@ -7,7 +9,7 @@ class FormName(forms.Form):
     email = forms.EmailField(validators=[validators.EmailValidator])
     verify_email = forms.EmailField(label='Enter your email again:')
     text = forms.CharField(widget=forms.Textarea)
-    botcacher = forms.CharField(required=False, widget=forms.HiddenInput, validators=[validators.MaxLengthValidator(0)])
+    captcha = ReCaptchaField(widget=ReCaptchaV2Invisible)
 
     def clean(self):
         all_clean_data = super().clean()
